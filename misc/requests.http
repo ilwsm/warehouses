@@ -54,7 +54,7 @@ Content-Type: application/x-www-form-urlencoded
 ### Retrieve filtered Warehouse entities (HTTP GET) Option 3:
 GET http://localhost:8080/rest/whs?
     where=[country=USA,city=Augusta]&
-    orderby=name&
+    orderby=name,city&
     limit=2&
     offset=4
 
