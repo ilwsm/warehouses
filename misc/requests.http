@@ -1,0 +1,61 @@
+### Create a new Warehouse entity (HTTP POST):
+POST http://localhost:8080/rest/whs
+Content-Type: application/json
+
+{
+  "name": "Main",
+  "addressLine1": "SomeStreet 243",
+  "addressLine2": "",
+  "city": "Augusta",
+  "state": "Maine",
+  "country": "USA",
+  "inventoryQuantity": 300
+}
+
+### Retrieve all Warehouse entities (HTTP GET):
+GET http://localhost:8080/rest/whs
+Content-Type: application/x-www-form-urlencoded
+
+### Retrieve a specific Warehouse entity by id (HTTP GET):
+GET http://localhost:8080/rest/whs/111
+Content-Type: application/x-www-form-urlencoded
+
+### Update an existing Warehouse entity (HTTP PUT):
+PUT http://localhost:8080/rest/whs
+Content-Type: application/json
+
+{
+  "id" : 256,
+  "name": "Main9",
+  "addressLine1": "SomeStreet 42",
+  "addressLine2": "",
+  "city": "Kiev",
+  "state": "Kievska",
+  "country": "Ukraine",
+  "inventoryQuantity": 120
+}
+
+### Delete a Warehouse entity by id (HTTP DELETE):
+DELETE http://localhost:8080/rest/whs/1
+Content-Type: application/x-www-form-urlencoded
+
+
+### Retrieve filtered Warehouse entities (HTTP GET) Option 1:
+GET http://localhost:8080/rest/whs?
+    where=[country=Ukraine]&orderby=name
+
+Content-Type: application/x-www-form-urlencoded
+
+### Retrieve filtered Warehouse entities (HTTP GET) Option 2:
+GET http://localhost:8080/rest/whs?offset=1&where=[city=Augusta]
+
+Content-Type: application/x-www-form-urlencoded
+
+### Retrieve filtered Warehouse entities (HTTP GET) Option 3:
+GET http://localhost:8080/rest/whs?
+    where=[country=USA,city=Augusta]&
+    orderby=name&
+    limit=2&
+    offset=4
+
+Content-Type: application/x-www-form-urlencoded

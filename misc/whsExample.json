@@ -1,0 +1,9 @@
+{
+  "name": "Main",
+  "addressLine1": "SomeStreet 24",
+  "addressLine2": "",
+  "city": "Augusta",
+  "state": "Maine",
+  "country": "USA",
+  "inventoryQuantity": 300
+}
